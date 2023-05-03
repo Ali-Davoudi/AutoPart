@@ -3,6 +3,29 @@
 
 **Important hint:** I did not publish templates folders for each module. Because the project template was not free.
 
+Project capabilities and features:
+* Authentication system through the website itself and the Google account
+* Management of the shopping cart by the user
+* List of favorites
+* The possibility of applying a discount percentage to each product by admin
+* Storage (In Stock) and its dynamicity in case of addition/Removing from the cart and finalizing the purchase
+* Using CKEditor in blog module
+* Managing user comments on each product and article and confirming its display on the page by admin
+* Ability to share products and articles by social share (Social Media)
+* User panel: Possibility to edit personal information, change password, view shopping cart status, purchase invoice, etc
+* PWA feature
+* The dynamic nature of the website information
+* The automatic loss of the user's shopping cart information if it is open and does not pay within a certain period of time
+* Search functionality for products and articles
+* Advertising banners
+* Dynamic slider
+* Displaying the most visited and best selling products
+* Related products and articles
+* Filter by category or brand
+* Pagination
+* Using SweetAlert in Ajax structures
+* ...
+
 Some Shots:
 
 ![20230503_163947](https://user-images.githubusercontent.com/83768943/236017012-c5d0fe44-ee75-4a6a-80ef-77a9b10c8d4f.jpg)
