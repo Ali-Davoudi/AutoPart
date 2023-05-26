@@ -26,7 +26,9 @@ Project capabilities and features:
 * Using SweetAlert in Ajax structures
 * ...
 
+
 Some Shots:
+
 
 <img width="897" alt="Screenshot 2023-05-26 171223" src="https://github.com/Ali-Davoudi/AutoPart/assets/83768943/5b2d4bea-65da-4bc6-8726-3c23e939eb8d">
 <img width="902" alt="Screenshot 2023-05-26 173226" src="https://github.com/Ali-Davoudi/AutoPart/assets/83768943/44fe60d6-9d89-498d-bdfa-34dd788aed7b">
