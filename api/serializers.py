@@ -1,6 +1,5 @@
 from rest_framework import serializers
 from auth_module.models import User
-from blog_module.models import Blog
 from product_module.models import Product
 
 
@@ -20,27 +19,10 @@ class ProductSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Product
-        fields = '__all__'
-
-
-class ArticleSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Blog
-        fields = '__all__'
+        exclude = ['image']
 
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = '__all__'
-
-# class BrandSerializer(serializers.ModelSerializer): # Make nested wirtable for category and brand
-#     class Meta:
-#         model = ProductBrand
-#         fields = ['id', 'title']
-#
-#
-# class CategorySerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = ProductCategory
-#         fields = ['id', 'title']
