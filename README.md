@@ -5,17 +5,17 @@
 
 Project capabilities and features:
 * Authentication system through the website itself and the Google account
-* Management of the shopping cart by the user
+* Management of the shopping cart by related user
+* The automatic loss of the user's shopping cart information if it is open and does not pay within a certain period of time
 * List of favorites
 * The possibility of applying a discount percentage to each product by admin
-* Storage (In Stock) and its dynamicity in case of addition/Removing from the cart and finalizing the purchase
-* Using CKEditor in blog module
-* Managing user comments on each product and article and confirming its display on the page by admin
+* In Stock and its dynamicity in case of addition/Removing from the cart and finalizing the purchase
+* Using CKEditor
+* Managing user comments on each product and article and possibility for confirming its display on the page by admin
 * Ability to share products and articles by social share (Social Media)
 * User panel: Possibility to edit personal information, change password, view shopping cart status, purchase invoice, etc
 * PWA feature
 * The dynamic nature of the website information
-* The automatic loss of the user's shopping cart information if it is open and does not pay within a certain period of time
 * Search functionality for products and articles
 * Advertising banners
 * Dynamic slider
@@ -26,7 +26,9 @@ Project capabilities and features:
 * Using SweetAlert in Ajax structures
 * ...
 
-Some Shots:
+Some Shots from:
+<img width="897" alt="Screenshot 2023-05-26 171223" src="https://github.com/Ali-Davoudi/AutoPart/assets/83768943/5b2d4bea-65da-4bc6-8726-3c23e939eb8d">
+<img width="902" alt="Screenshot 2023-05-26 173226" src="https://github.com/Ali-Davoudi/AutoPart/assets/83768943/44fe60d6-9d89-498d-bdfa-34dd788aed7b">
 
 ![20230503_163947](https://user-images.githubusercontent.com/83768943/236017012-c5d0fe44-ee75-4a6a-80ef-77a9b10c8d4f.jpg)
 ![20230503_164258](https://user-images.githubusercontent.com/83768943/236017017-4323cbbb-64c5-4e0c-8672-f68e2b7e13d5.jpg)
