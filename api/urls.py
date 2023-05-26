@@ -1,11 +1,11 @@
 from django.urls import path, include
-
-from api.views import ArticleList, ArticleDetail, UserList, UserDetail, ProductList, ProductDetail
+from rest_framework.authtoken.views import obtain_auth_token
+from api.views import UserList, UserDetail, ProductList, ProductDetail, RevokeToken
 
 urlpatterns = [
-    path('api-auth', include('rest_framework.urls')),
-    path('blog/', ArticleList.as_view(), name='blog'),
-    path('blog/<int:pk>', ArticleDetail.as_view(), name='blog_detail'),
+    # path('api-auth', include('rest_framework.urls')),
+    path('auth-token/', obtain_auth_token),
+    path('revoke-token/', RevokeToken.as_view()),
     path('users/', UserList.as_view(), name='users'),
     path('users/<int:pk>', UserDetail.as_view(), name='user_detail'),
     path('products/', ProductList.as_view(), name='products'),
