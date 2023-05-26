@@ -55,6 +55,8 @@ INSTALLED_APPS = [
 
     # External apps
     'rest_framework',
+    'rest_framework.authtoken',
+    'django_filters',
     'django_render_partial',
     'sorl.thumbnail',
     'ckeditor',
@@ -213,6 +215,22 @@ PWA_APP_LANG = 'fa-ir'
 PWA_SERVICE_WORKER_PATH = 'static/pwa/sw/serviceworker.js'
 PWA_APP_DEBUG_MODE = False
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+    # Handeled in views
+    # 'DEFAULT_FILTER_BACKENDS': [
+    #     'django_filters.rest_framework.DjangoFilterBackend',
+    #     'rest_framework.filters.SearchFilter',
+    #     'rest_framework.filters.OrderingFilter',
+    # ]
+}
+
 # Ckeditor configs
 CKEDITOR_CONFIGS = {
     'default': {
@@ -363,10 +381,4 @@ JALALI_DATE_DEFAULTS = {
             ]
         }
     },
-}
-
-REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',
-    ]
 }
