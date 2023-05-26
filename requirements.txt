@@ -13,6 +13,7 @@ defusedxml==0.7.1
 Django==4.1.6
 django-admin-persian-fonts==0.2
 django-ckeditor==6.5.1
+django-filter==23.2
 django-jalali-date==1.0.1
 django-js-asset==2.0.0
 django-pwa==1.1.0
@@ -36,6 +37,7 @@ pydyf==0.5.0
 pyHanko==0.17.2
 pyhanko-certvalidator==0.20.1
 PyJWT==2.6.0
+pylokit==0.8.1
 pymongo==4.3.3
 pypdf==3.5.2
 pyphen==0.13.2
