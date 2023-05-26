@@ -1,11 +1,13 @@
-from django.shortcuts import render
+from django.http import HttpRequest
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import filters
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 from rest_framework.permissions import IsAdminUser
-
+from rest_framework.response import Response
+from rest_framework.views import APIView
 from api.permissions import IsStaffOrReadOnly
-from api.serializers import ArticleSerializer, UserSerializer, ProductSerializer
+from api.serializers import UserSerializer, ProductSerializer
 from auth_module.models import User
-from blog_module.models import Blog
 from product_module.models import Product
 
 
@@ -13,6 +15,9 @@ class ProductList(ListCreateAPIView):
     serializer_class = ProductSerializer
     queryset = Product.objects.all()
     permission_classes = [IsStaffOrReadOnly]
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+    filterset_fields = ['title', 'brand', 'category', 'in_stock']
+    search_fields = ['title', 'brand__title', 'category__title', 'description']
 
 
 class ProductDetail(RetrieveUpdateDestroyAPIView):
@@ -21,21 +26,20 @@ class ProductDetail(RetrieveUpdateDestroyAPIView):
     permission_classes = [IsAdminUser]
 
 
-class ArticleList(ListCreateAPIView):
-    serializer_class = ArticleSerializer
-    queryset = Blog.objects.all()
-
-
-class ArticleDetail(RetrieveUpdateDestroyAPIView):
-    serializer_class = ArticleSerializer
-    queryset = Blog.objects.all()
-
-
 class UserList(ListCreateAPIView):
     serializer_class = UserSerializer
     queryset = User.objects.all()
+    filter_backends = [DjangoFilterBackend]
+    filterset_fields = ['username', 'first_name', 'last_name', 'is_active', 'is_staff', 'is_superuser', 'gender']
 
 
 class UserDetail(RetrieveUpdateDestroyAPIView):
     serializer_class = UserSerializer
     queryset = User.objects.all()
+
+
+class RevokeToken(APIView):
+    def delete(self, request: HttpRequest):
+        self.request.auth.delete()
+        # When token revoked, show 204 status code (DELETE Method)
+        return Response(status=204)
