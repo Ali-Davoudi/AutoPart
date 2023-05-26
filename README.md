@@ -4,6 +4,7 @@
 **Important hint:** I did not publish templates folders for each module. Because the project template is not free.
 
 Project capabilities and features:
+* API
 * Authentication system through the website itself and the Google account
 * Management of the shopping cart by related user
 * The automatic loss of the user's shopping cart information if it is open and does not pay within a certain period of time
