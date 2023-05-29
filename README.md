@@ -56,4 +56,5 @@ Some Shots:
 <img width="932" alt="Screenshot_2023-05-03_134239" src="https://user-images.githubusercontent.com/83768943/236017095-214f078e-1173-4e84-a964-f73cf117f390.png">
 <img width="626" alt="Screenshot_2023-05-03_134651" src="https://user-images.githubusercontent.com/83768943/236017110-862de585-9c7f-4988-b9d1-19db9aed7d30.png">
 <img width="933" alt="Screenshot_2023-05-03_134957" src="https://user-images.githubusercontent.com/83768943/236017111-40dd106b-188b-4a23-b90e-46d1c61be5ab.png">
+<img width="901" alt="Screenshot 2023-05-29 224400" src="https://github.com/Ali-Davoudi/AutoPart/assets/83768943/c6cc2309-7e44-46cc-9a06-6b86370dea79">
 <img width="962" alt="Screenshot_2023-05-03_135033" src="https://user-images.githubusercontent.com/83768943/236017118-ec51004c-c740-455c-ab7f-f9bdaa9d6243.png">
