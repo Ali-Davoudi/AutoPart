@@ -6,6 +6,7 @@
 Project capabilities and features:
 * API
 * Authentication system through the website itself and the Google account
+* Auth: Login, Logout, Register, Sending Email active code to user for complete registration, Forgot password, Reset password
 * Management of the shopping cart by related user
 * The automatic loss of the user's shopping cart information if it is open and does not pay within a certain period of time
 * List of favorites
