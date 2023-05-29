@@ -12,6 +12,7 @@ Project capabilities and features:
 * The possibility of applying a discount percentage to each product by admin
 * In Stock and its dynamicity in case of addition/Removing from the cart and finalizing the purchase
 * Product galleries
+* Special discounts
 * Using CKEditor
 * Managing user comments on each product and article and possibility for confirming its display on the page by admin
 * Ability to share products and articles by social share (Social Media)
