@@ -38,6 +38,7 @@ class HomeTemplateView(TemplateView):
         context['banners'] = SiteBanner.objects.filter(
             is_active=True, position__iexact=SiteBanner.SiteBannerPosition.home_page)[:2]
 
-        context['special_discounts'] = Product.objects.filter(discount__gte=5, is_active=True, is_delete=False)
+        context['special_discounts'] = Product.objects.filter(discount__gte=5, in_stock__gt=0, is_active=True, 
+                                                              is_delete=False)
         
         return context
