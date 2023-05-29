@@ -110,7 +110,22 @@ class ProductDetailView(DetailView):
             visit_result = ProductVisit(
                 user_id=user_id, product_id=loaded_product.id, ip=user_ip)
             visit_result.save()
+            
+        # Create next and previous product links
+        next_product = Product.objects.filter(
+            is_active=True,
+            is_delete=False,
+            id__gt=loaded_product.id
+        ).first()
+        previous_product = Product.objects.filter(
+            is_active=True,
+            is_delete=False,
+            id__lt=loaded_product.id
+        ).last()
 
+        context['next_product'] = next_product
+        context['previous_product'] = previous_product
+        
         return context
 
     def get_queryset(self):
