@@ -1,0 +1,59 @@
+{% extends 'shared/_MainLayout.html' %}
+
+{% block title %}ارتباط با ما{% endblock %}
+
+{% block content %}
+    {% include 'components/Breadcrumbs/BreadCrumbs.html' with title='ارتباط با ما' %}
+    <div class="contact_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="contact_message content">
+                        <h3>ارتباط با ما</h3>
+                        <p>نظرات ارزشمندتان را با ما در میان بگذارید</p>
+                        <ul>
+                            <li><i class="fa fa-fax"></i> آدرس: {{ contact_info.address }}</li>
+                            <li><i class="fa fa-phone"></i> <a
+                                    href="tel:{{ contact_info.telephone }}">{{ contact_info.telephone }}</a></li>
+                            {% if contact_info.email %}
+                                <li><i class="fa fa-envelope-o"></i><a
+                                        href="mailto:{{ contact_info.email }}">{{ contact_info.email }}</a>
+                                </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="contact_message form">
+                        <h3>دیدگاهتان را با ما در میان بگذارید</h3>
+                        <form method="post" action="{% url 'contact_page' %}">
+                            {% csrf_token %}
+                            <p class="{% if contact_form.fullname.errors %} text-danger {% endif %}">
+                                {{ contact_form.fullname.label_tag }}
+                                {{ contact_form.fullname }}
+                                {{ contact_form.fullname.errors }}
+                            </p>
+                            <p class="{% if contact_form.email.errors %} text-danger {% endif %}">
+                                {{ contact_form.email.label_tag }}
+                                {{ contact_form.email }}
+                                {{ contact_form.email.errors }}
+                            </p>
+                            <p class="{% if contact_form.subject.errors %} text-danger {% endif %}">
+                                {{ contact_form.subject.label_tag }}
+                                {{ contact_form.subject }}
+                                {{ contact_form.subject.errors }}
+                            </p>
+                            <div class="contact_textarea {% if contact_form.message.errors %} text-danger {% endif %}">
+                                {{ contact_form.message.label_tag }}
+                                {{ contact_form.message }}
+                                {{ contact_form.message.errors }}
+                            </div>
+                            <button type="submit"> ارسال</button>
+                            <p class="form-messege"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
