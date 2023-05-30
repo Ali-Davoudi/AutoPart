@@ -62,27 +62,3 @@ class UserPanelDashboardView(View):
             'change_user_password_form': change_user_password_form
         }
         return render(request, 'userpanel_module/UserPanelDashboard.html', context)
-
-
-def order_factor_pdf(request: HttpRequest):
-    # Get data from your model
-    data = Product.objects.all()
-
-    # Get the PDF template
-    template = get_template('userpanel_module/paid_factor/factor.html')
-
-    # Render the template with the data
-    context = {'data': data}
-    html = template.render(context)
-
-    # Set up the response
-    response = HttpResponse(content_type='application/pdf')
-    response['Content-Disposition'] = 'attachment; filename="my_model_report.pdf"'
-
-    # Generate the PDF
-    doc = SimpleDocTemplate(response, pagesize=letter)
-    styles = getSampleStyleSheet()
-    flowables = [Paragraph(html, styles['Normal'])]
-    doc.build(flowables)
-
-    return response
