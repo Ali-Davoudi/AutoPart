@@ -1,7 +1,7 @@
 # AutoPart
  e-Commerce Project for sample of my codes
 
-**Important hint:** I did not publish templates folders for each module. Because the project template is not free.
+**Important hint:** I did not publish main static files for each module. Because the project template is not free.
 
 Project capabilities and features:
 * API
