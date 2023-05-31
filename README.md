@@ -11,7 +11,7 @@ Project capabilities and features:
 * The automatic loss of the user's shopping cart information if it is open and does not pay within a certain period of time
 * List of favorites
 * The possibility of applying a discount percentage to each product by admin
-* In Stock and its dynamicity in case of addition/Removing from the cart and finalizing the purchase
+* In Stock and its dynamicity in case of addition, removing from the cart and also finalizing the purchase
 * Product galleries
 * Special discounts
 * Using CKEditor
