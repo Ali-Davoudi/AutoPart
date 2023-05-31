@@ -20,3 +20,11 @@ def validate_email(email: str) -> str:
     if service.lower() not in accepted_serivces:
         raise ValidationError('آدرس ایمیل از سرویس های ایمیل مشهور یا امن مانند گوگل، یاهو و... نمی باشد.')
     return email
+
+
+def validate_discount(percentage: int) -> int:
+    """Validate discount percentage"""
+    if percentage <= 100:
+        return percentage
+    else:
+        raise ValidationError('برای اعمال تخفیف، درصد نمی تواند بیشتر از 100 باشد.')
