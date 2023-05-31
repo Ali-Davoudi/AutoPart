@@ -53,7 +53,8 @@ class Product(models.Model):
     production_country = models.CharField(max_length=150, verbose_name='کشور سازنده')
     image = models.ImageField(upload_to='images/products', verbose_name='تصویر')
     price = models.PositiveBigIntegerField(verbose_name='قیمت محصول')
-    discount = models.PositiveIntegerField(verbose_name='درصد اعمال تخفیف', default=0, blank=True)
+    discount = models.PositiveIntegerField(verbose_name='درصد اعمال تخفیف', default=0, blank=True,
+                                           validators=[validate_discount])
     discounted_price = models.IntegerField(null=True)
     sell_price = models.IntegerField(null=True)
     in_stock = models.PositiveIntegerField(verbose_name='تعداد در انبار')
