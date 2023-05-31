@@ -1,6 +1,7 @@
 from django.db.models import Q
 from django.urls import reverse
 from django.db import models
+from utils.validators import validate_discount
 from jalali_date import date2jalali
 from auth_module.models import User
 
