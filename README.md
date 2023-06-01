@@ -9,6 +9,7 @@ Project capabilities and features:
 * Auth: Login, Logout, Register, Sending Email active code to user for complete registration, Forgot password, Reset password
 * Management of the shopping cart by related user
 * The automatic loss of the user's shopping cart information if it is open and does not pay within a certain period of time
+* Star ratings for each product
 * List of favorites
 * The possibility of applying a discount percentage to each product by admin
 * In Stock and its dynamicity in case of addition, removing from the cart and also finalizing the purchase
@@ -32,6 +33,11 @@ Project capabilities and features:
 
 
 Some Shots:
+
+New feature: Star rating
+<img width="956" alt="Screenshot 2023-06-01 224053" src="https://github.com/Ali-Davoudi/AutoPart/assets/83768943/27fdecfd-aaa7-445c-ac06-710c618de1cd">
+<img width="950" alt="Screenshot 2023-06-01 224202" src="https://github.com/Ali-Davoudi/AutoPart/assets/83768943/d1fc89b1-2485-482f-b748-5e1565aa7243">
+<img width="938" alt="Screenshot 2023-06-01 225635" src="https://github.com/Ali-Davoudi/AutoPart/assets/83768943/244a7e01-817f-4cb1-b2a4-348b7a414805">
 
 
 <img width="897" alt="Screenshot 2023-05-26 171223" src="https://github.com/Ali-Davoudi/AutoPart/assets/83768943/5b2d4bea-65da-4bc6-8726-3c23e939eb8d">
