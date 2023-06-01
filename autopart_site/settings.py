@@ -382,3 +382,6 @@ JALALI_DATE_DEFAULTS = {
         }
     },
 }
+
+# Star rating
+STAR_RATINGS_STAR_HEIGHT = 17
