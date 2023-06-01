@@ -65,6 +65,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'pwa',
     'social_django',  # for google authentication-OAuth
+    'star_ratings',
 ]
 
 MIDDLEWARE = [
