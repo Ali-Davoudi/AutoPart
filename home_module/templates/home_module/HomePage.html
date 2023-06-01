@@ -12,27 +12,7 @@
                     <div class="slider_area owl-carousel">
                         {% for slider in sliders %}
                             <div class="single_slider d-flex align-items-center"
-                                 data-bgimg="
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                         {% thumbnail slider.image '825x520' crop='center' as img %}{{ img.url }}{% endthumbnail %}">
+                                 data-bgimg="{% thumbnail slider.image '825x520' crop='center' as img %}{{ img.url }}{% endthumbnail %}">
                                 <div class="slider_content">
                                     <h2> {{ slider.title }} </h2>
                                     <h1> {{ slider.main_title }} </h1>
@@ -132,15 +112,7 @@
                                         {% endif %}
                                     </div>
                                     <div class="product_content">
-                                        <div class="product_ratings">
-                                            <ul>
-                                                <li><a href="#"><i class="ion-star"></i></a></li>
-                                                <li><a href="#"><i class="ion-star"></i></a></li>
-                                                <li><a href="#"><i class="ion-star"></i></a></li>
-                                                <li><a href="#"><i class="ion-star"></i></a></li>
-                                                <li><a href="#"><i class="ion-star"></i></a></li>
-                                            </ul>
-                                        </div>
+                                        {% include 'includes/star_rating/StarRating.html' with object=product %}
                                         <div class="product_footer d-flex align-items-center">
                                             <div class="price_box">
                                                 <span class="regular_price">{{ product.sell_price|intcomma:False }} تومن</span>
@@ -170,15 +142,7 @@
                             <div class="single_product">
                                 <div class="product_content">
                                     <h3><a href="{{ product.get_absolute_url }}">{{ product.title }}</a></h3>
-                                    <div class="product_ratings">
-                                        <ul>
-                                            <li><a href="#"><i class="ion-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-star"></i></a></li>
-                                        </ul>
-                                    </div>
+                                    {% include 'includes/star_rating/StarRating.html' with object=product %}
                                     <div class="price_box">
                                         {% if product.discount %}
                                             <span class="current_price">{{ product.sell_price|intcomma:False }} تومن</span>
@@ -217,15 +181,7 @@
                             <div class="single_product">
                                 <div class="product_content">
                                     <h3><a href="{{ product.get_absolute_url }}">{{ product.title }} </a></h3>
-                                    <div class="product_ratings">
-                                        <ul>
-                                            <li><a href="#"><i class="ion-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-star"></i></a></li>
-                                        </ul>
-                                    </div>
+                                    {% include 'includes/star_rating/StarRating.html' with object=product %}
                                     <div class="price_box">
                                         <span class="regular_price">{{ product.price|intcomma:False }} تومن</span>
                                     </div>
@@ -318,15 +274,7 @@
                                     </div>
                                 </div>
                                 <div class="product_content">
-                                    <div class="product_ratings">
-                                        <ul>
-                                            <li><a href="#"><i class="ion-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-star"></i></a></li>
-                                            <li><a href="#"><i class="ion-star"></i></a></li>
-                                        </ul>
-                                    </div>
+                                    {% include 'includes/star_rating/StarRating.html' with object=special_discount %}
                                     <div class="product_footer d-flex align-items-center">
                                         <div class="price_box">
                                             <span class="regular_price">{{ special_discount.sell_price|intcomma:False }}  تومن </span>
