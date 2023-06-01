@@ -2,6 +2,7 @@
 {% load humanize %}
 {% load thumbnail %}
 {% load render_partial %}
+{% load ratings %}
 
 {% block title %}محصولات{% endblock %}
 
@@ -162,15 +163,8 @@
                                                 <h3><a href="{{ product.get_absolute_url }}">{{ product.title }} </a>
                                                 </h3>
                                             </div>
-                                            <div class="product_ratings">
-                                                <ul>
-                                                    <li><a href="#"><i class="ion-star"></i></a></li>
-                                                    <li><a href="#"><i class="ion-star"></i></a></li>
-                                                    <li><a href="#"><i class="ion-star"></i></a></li>
-                                                    <li><a href="#"><i class="ion-star"></i></a></li>
-                                                    <li><a href="#"><i class="ion-star"></i></a></li>
-                                                </ul>
-                                            </div>
+                                            
+                                            {% include 'includes/star_rating/StarRating.html' with object=product %}
 
                                             <div class="product_desc">
                                                 <p>{{ product.short_description }}</p>
